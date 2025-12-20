@@ -2,9 +2,11 @@
 
 Message storage and retrieval backend for [@voscarmv/aichatbot](https://www.npmjs.com/package/@voscarmv/aichatbot)
 
-## Install
+## Usage
 
-You may install `postgresql` and create a new username, password and database, with this script:
+You may use this as per [the demo.](https://github.com/voscarmv/aibot)
+
+Or as a standalone backend for a @voscarmv/aichatbot project. For that, install `postgresql` and create a new username, password and database, with this script:
 
 ```bash
 #!/bin/bash
@@ -33,4 +35,4 @@ echo "DATABASE_URL=postgres://$PGUSER:$PASS@localhost/$DB" >> .env
 echo "✅ Database, user, and .env file created. Edit .env if needed."
 ```
 
-Then just `npx drizzle-kit create` to create your `schema.ts` and you are ready to deploy with `npm publish`.
+And then just run an instance of `MessageStoreBackend()` as in [this example.](https://github.com/voscarmv/aibot/blob/main/src/server.ts)
