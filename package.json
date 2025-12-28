@@ -1,6 +1,6 @@
 {
   "name": "@voscarmv/aimessagestore",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Message storage and retrieval for aichatbot framework ",
   "keywords": [
     "ai",
@@ -37,7 +37,11 @@
     "db:generate": "npx drizzle-kit generate",
     "db:migrate": "npx drizzle-kit migrate"
   },
+  "bin": {
+    "migrate": "./dist/migrate.js"
+  },
   "dependencies": {
+    "commander": "^14.0.2",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "drizzle-orm": "^0.45.1",

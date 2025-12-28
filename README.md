@@ -35,4 +35,6 @@ echo "DATABASE_URL=postgres://$PGUSER:$PASS@localhost/$DB" >> .env
 echo "✅ Database, user, and .env file created. Edit .env if needed."
 ```
 
+You may now run `npx migrate --dburl postgres://username:password@host/database` with your own DB URL to migrate the schema.
+
 And then just run an instance of `MessageStoreBackend()` as in [this example.](https://github.com/voscarmv/aibot/blob/main/src/server.ts)
